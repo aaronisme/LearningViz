@@ -13,8 +13,7 @@
                   "ALABAMA",
                   "ARIZONA",
                   "ARKANSAS",
-                  "CALIFORNIA",
-                  "UTAH"
+                  "CALIFORNIA"
                ]
             },
             {
@@ -56,59 +55,16 @@
             "dimensions":
             [
                {
-                  
-                  "scale":{
-                      "spans":[
-                        {
-                            "min":2500000,
-                            "max":9500000,
-                            "tickDelta":750000
-                            
-                        }  
-                    ]
-                      
-                  },
-                  "axis":
-                  {
-                     "tickStyle":
-                     {
-                        "fill":"blue",
-                        "font":
-                        {
-                           "family":"Arial",
-                           "size":"10pt"
-                        }
-                     }
-                  }
-               },
-               {
-                   "scale":{
-                      "local":true
-                       
-                   },
-                  "axis":
-                  {
-                     "tickStyle":
-                     {
-                        "fill":"red",
-                        "font":
-                        {
-                           "family":"Times New Roman",
-                           "size":"8pt"
-                        },
-                        "title":
-                        [
-                           "States"
-                        ],
-                        "method":"vertical"
-                     }
-                  }
+                   
                }
             ],
             "transforms":[
                 {
-                    "type":"transpose"
-                }    
+                    "type":"stack"
+                },
+                {
+                    "type":"polar"
+                }
             ],
             "style":
             {
@@ -126,13 +82,19 @@
                      {
                         "$ref":"pop1980"
                      }
-                  },
-                  {
-                     "field":
-                     {
-                        "$ref":"name"
-                     }
                   }
+               ],
+               "color":[
+                   {
+                  "field":{"$ref":"name"},
+                  "palette":[
+                   "red",
+                   "blue",
+                   "green",
+                   "yellow"
+                   
+                 ]
+                }
                ],
                "style":
                {
