@@ -13,7 +13,8 @@
                   "ALABAMA",
                   "ARIZONA",
                   "ARKANSAS",
-                  "CALIFORNIA"
+                  "CALIFORNIA",
+                  "UTAH"
                ]
             },
             {
@@ -55,6 +56,18 @@
             "dimensions":
             [
                {
+                  
+                  "scale":{
+                      "spans":[
+                        {
+                            "min":2500000,
+                            "max":9500000,
+                            "tickDelta":750000
+                            
+                        }  
+                    ]
+                      
+                  },
                   "axis":
                   {
                      "tickStyle":
@@ -69,6 +82,10 @@
                   }
                },
                {
+                   "scale":{
+                      "local":true
+                       
+                   },
                   "axis":
                   {
                      "tickStyle":
@@ -87,6 +104,11 @@
                      }
                   }
                }
+            ],
+            "transforms":[
+                {
+                    "type":"transpose"
+                }    
             ],
             "style":
             {
